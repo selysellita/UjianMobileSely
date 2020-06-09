@@ -6,7 +6,7 @@ export const getData = () => {
         try {
             let res = await Axios.get('https://api.thecatapi.com/v1/images/search?limit=10',
                 {headers:{
-                    " X-Api-Key" : "ac5aaaff-4b71-4312-980e-3bb08e833c53"
+                    " X-Api-Key" : "743337bc-accc-41e9-a2f3-25b69da0acac"
                 }}
             )
             
@@ -32,7 +32,7 @@ export const loginAction = (data) => {
                 type: 'LOGIN',
                 payload: data.username
             })
-            await AsyncStorage.setItem('username', data)
+            await AsyncStorage.setItem('username', JSON.stringify(data.username))
         } catch (error) {
             
         }

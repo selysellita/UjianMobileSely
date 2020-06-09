@@ -24,7 +24,7 @@ const Logout = () => {
                     }}
                     buttonStyle={{
                         backgroundColor: '#3DDC84',
-                        width: '55%'
+                        width: '75%'
                     }}
                 />
             </View>

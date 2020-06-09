@@ -10,11 +10,11 @@ const ProfileDrawer = () => {
         <Drawer.Navigator 
             drawerPosition="right"
             drawerContentOptions={{
-                activeTintColor: '#3DDC84'
+                activeTintColor: '#3ded97'
             }}
         >
             <Drawer.Screen name="Profile" component={Profile} />
-            <Drawer.Screen name="Settings" component={Logout} />
+            <Drawer.Screen name="Logout" component={Logout} />
         </Drawer.Navigator>
     );
 };

@@ -5,12 +5,12 @@ import { getData } from '../Redux/Action/AuthAction';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Home = ({navigation}) => {
-    let dataKucing = useSelector(state => state.auth.dataKucing);
+    let dataKucing = useSelector(state => state.Auth.dataKucing);
     let dispatch = useDispatch();
     // console.log(dataKucing)
     
     useEffect(() =>{
-        dispatch(getData())
+        dispatch( getData())
     }, [dispatch])
 
     return (
@@ -36,5 +36,10 @@ const Home = ({navigation}) => {
         </View>
     );
 };
+const MapStateToProps=(state)=>{
+    return{
+        Auth:state.Auth
+    }
+}
 
 export default Home;

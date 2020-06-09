@@ -3,8 +3,8 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
-    let {username} = useSelector(state => state.auth.username)
-    let image = useSelector(state => state.auth.image)
+    let {username} = useSelector(state => state.Auth.username)
+    let image = useSelector(state => state.Auth.image)
     console.log(image)
     return (
         <View style={styles.container}>
@@ -21,7 +21,7 @@ const Profile = () => {
                 :
                 <View>
                 <Image 
-                source={require('../Assets/defaultpicture.jpg')}
+                source={require('../Assets/defaultpicture.png')}
                 style={styles.image}
                 />
                 </View>
@@ -39,9 +39,8 @@ const styles = StyleSheet.create({
     },
     image: {
         borderWidth: 2,
-        borderRadius: 150,
-        width: 150,
-        height: 150
+        width: 200,
+        height: 200
     }
 })
 

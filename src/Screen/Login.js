@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {View, StatusBar, StyleSheet} from 'react-native';
 import { Icon, Input, Button } from 'react-native-elements';
-import { useDispatch, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { loginAction } from '../Redux/Action';
 
 const Login=({navigation,loginAction})=>{
