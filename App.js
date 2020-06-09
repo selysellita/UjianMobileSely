@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 // import MainNavigation from './src/Navigation/MainNavigator';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-import { reducer } from './src/Redux/Reducer';
+import reducer from './src/Redux/Reducer';
 import thunk from 'redux-thunk';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNav from './src/Navigation/TabNav';

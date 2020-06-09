@@ -22,14 +22,17 @@ export const getData = () => {
 }
 
 export const loginAction = (data) => {
-    console.log(data)
+    console.log(data, 'loginaction')
+    // return {
+    //     type:'LOGIN', payload:data.username
+    // }
     return async (dispatch) => {
         try {
             dispatch({
                 type: 'LOGIN',
-                payload: data
+                payload: data.username
             })
-            await AsyncStorage.setItem('username', JSON.stringify(data))
+            await AsyncStorage.setItem('username', data)
         } catch (error) {
             
         }

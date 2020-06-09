@@ -13,17 +13,18 @@ import AsyncStorage from '@react-native-community/async-storage';
 const HomeNavigation = ({Auth}) => {
     let username = Auth.username
     let dispatch = useDispatch();
+    console.log(Auth.username, 'homenavigation')
     console.log(username, 'keeplogin')
     useEffect(() => {
         AsyncStorage.getItem('username')
         .then(res => {
             // console.log(res)
-            dispatch(keepLogin(res))
+            keepLogin(res)
         })
         .catch(err => {
             console.log(err)
         })
-    }, [dispatch])
+    }, [])
 
     return (
         <NavigationContainer>
@@ -44,4 +45,4 @@ const MapstateToProps=(state)=>{
     }
 }
 
-export default connect(MapstateToProps) (HomeNavigation);
+export default connect(MapstateToProps,{keepLogin}) (HomeNavigation);

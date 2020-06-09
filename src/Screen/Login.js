@@ -4,7 +4,7 @@ import { Icon, Input, Button } from 'react-native-elements';
 import { useDispatch, connect } from 'react-redux';
 import { loginAction } from '../Redux/Action';
 
-const Login=({navigation})=>{
+const Login=({navigation,loginAction})=>{
     const [username, setUsername] = useState('');
     return(
         <View style={styles.container} >

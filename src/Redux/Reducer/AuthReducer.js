@@ -4,12 +4,11 @@ const INITIAL_STATE = {
     image: '',
 };
 
-export const AuthReducer = (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'LOGIN':
             return {
-                ...state,
-                ...action.payload
+                ...state, username:action.payload
             }
         case 'GET_DATA':
             return {
